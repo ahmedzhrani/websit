@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-translate-key="pageTitle">Ahmed Al-Zahrani - Profile</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <script defer src="js/script.js"></script>
+</head>
+<body>
+    <main class="content-area">
+        <div class="card">
+            <div class="card-header">
+                <button id="lang-toggle-btn" class="lang-toggle-btn" type="button" aria-label="Switch Language">ع</button>
+                <button id="mode-toggle-btn" class="mode-toggle-icon-container" type="button" 
+                        aria-label="Switch to Light Mode" 
+                        title="Switch to Light Mode"
+                        aria-pressed="true">
+                    <img id="mode-icon" src="assets/img/sun.svg" alt="Sun icon (Light Mode)" />
+                </button>
+            </div>
+
+            <h1 data-translate-key="profileName"></h1>
+            <div class="profile-info">
+                <p class="info about-me">
+                    <strong data-translate-key="aboutMeTitle"></strong>
+                    <br>
+                    <span data-translate-key="aboutMeContent"></span>
+                </p>
+            </div>
+
+            <a class="btn main-action-btn" id="vcf-link" href="#"> 
+                <span data-translate-key="addVCF"></span>
+            </a>
+            <button id="contact-now-btn" class="btn main-action-btn" type="button">
+                <span data-translate-key="contactNow"></span>
+            </button>
+        </div>
+    </main>
+
+    <div id="contact-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" style="display: none;">
+        <div class="modal-content">
+            <button id="close-modal-btn" class="close-modal-btn" type="button" aria-label="Close Window">&times;</button>
+            <h2 id="modal-title" data-translate-key="contactVia"></h2>
+            <div class="modal-links">
+                <a id="modal-phone-link" href="#" class="modal-link phone-link">
+                    <img src="assets/img/phone-icon.svg" alt="Phone Icon" class="modal-icon">
+                    <span class="modal-link-text-content">
+                        <span data-translate-key="callPrefix"></span> <span class="phone-number-display"></span>
+                    </span>
+                </a>
+                <button type="button" id="modal-copy-email-btn" class="modal-link email-copy-btn" data-email="">
+                    <img src="assets/img/email-icon.svg" alt="Email Icon" class="modal-icon">
+                    <span class="modal-link-text-content">
+                        <span class="btn-text-email"><span class="email-address-placeholder"></span> (<span data-translate-key="copySuffix"></span>)</span>
+                    </span>
+                </button>
+                <a id="modal-whatsapp-link" href="#" target="_blank" rel="noopener noreferrer" class="modal-link whatsapp-link">
+                    <img src="assets/img/whatsapp-icon.svg" alt="WhatsApp Icon" class="modal-icon">
+                    <span class="modal-link-text-content">WhatsApp</span>
+                </a>
+                <a id="modal-linkedin-link" href="#" target="_blank" rel="noopener noreferrer" class="modal-link linkedin-link">
+                    <img src="assets/img/linkedin-icon.svg" alt="LinkedIn Icon" class="modal-icon">
+                    <span class="modal-link-text-content">LinkedIn</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="page-footer">
+        <button id="toggle-copyright-btn" class="copyright-toggle-btn" type="button" aria-expanded="false" aria-controls="copyright-notice" 
+                data-aria-label-key="toggleCopyrightAriaLabel" 
+                aria-label="Toggle Copyright Display">
+            <span class="arrow-icon" aria-hidden="true">⇡</span>
+        </button>
+        <div id="copyright-notice" class="copyright-notice" style="display: none;">
+        </div>
+    </footer>
+</body>
+</html>
